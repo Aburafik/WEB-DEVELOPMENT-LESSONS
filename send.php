@@ -29,7 +29,7 @@ $mail->send();
          "
          <script>
         alert('Your message was sent!');
-        document.location.href='index.php';
+        document.location.href='index.html';
         </script>";
 
 

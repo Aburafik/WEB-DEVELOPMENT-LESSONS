@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -15,5 +15,30 @@
         <button type="submit" name="send">Send</button>
         <br><br>
     </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+</head>
+<body>
+    <form action="send.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" required>
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" cols="30" required></textarea>
+        <br><br>
+        <button type="submit" name="send">Send</button>
+    </form>
+    <?php if (isset($_GET['success'])): ?>
+      <p>Your message was sent successfully!</p>
+    <?php endif; ?>
 </body>
 </html>
